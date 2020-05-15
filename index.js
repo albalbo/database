@@ -18,7 +18,7 @@ app.get("/post",(req,res)=>{
     
     tvs.find({},{__v:0,_id:0},(err,val)=>{ //request all data from menu collection
         console.log(val)
-        res.send(val)  
+        res.render(val)  
     })
 
 });

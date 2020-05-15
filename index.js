@@ -23,6 +23,13 @@ app.get("/post",(req,res)=>{
 
 });
 
+app.get('/view', function(req, res){
+	tvs.find({}, function(err, docs){
+		if(err) res.json(err);
+		else    res.render('final.jade', {tvs: docs});
+	});
+});
+
 // get list of all orders in database used in chef page 
 // app.get("/order",(req,res)=>{
     
